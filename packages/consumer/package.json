@@ -1,0 +1,20 @@
+{
+  "name": "consumer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "starter consumer",
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "tsc --outDir build",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "tsoa-starter-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.26",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.3"
+  },
+  "license": "MIT"
+}

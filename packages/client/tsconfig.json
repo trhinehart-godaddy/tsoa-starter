@@ -1,0 +1,17 @@
+{
+  /* Visit https://aka.ms/tsconfig to read more about this file */
+  "extends": "../../tsconfig.json",
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "core/*": [
+        "./src/generated/core/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

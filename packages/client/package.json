@@ -1,0 +1,26 @@
+{
+  "name": "tsoa-starter-client",
+  "version": "1.0.0",
+  "description": "starter client",
+  "main": "./build/index.js",
+  "module": "./build/index.mjs",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "pregenerate": "rimraf ./src/generated",
+    "generate": "openapi --useOptions --useUnionTypes --input ../api/build/tsoa/swagger.json --output ./src/generated --name Client --request ./src/request.ts --indent 2",
+    "prebuild": "npm run generate",
+    "build": "tsup",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "cross-fetch": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.26",
+    "openapi-typescript-codegen": "^0.28.0",
+    "rimraf": "^5.0.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
+  },
+  "license": "MIT"
+}

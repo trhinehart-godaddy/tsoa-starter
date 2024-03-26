@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:api && npm run build:rest",
+    "build:api": "lerna run build --scope=api",
+    "build:rest": "lerna run build --ignore=api"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.2"
+  }
+}
